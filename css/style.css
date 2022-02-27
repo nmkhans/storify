@@ -1,6 +1,149 @@
+/* ================================
+    Utility CSS
+============================*/
+
 *{
     padding: 0;
     margin: 0;
     box-sizing: border-box;
     font-family: 'Lato', sans-serif;   
+}
+
+:root {
+    --primary: #574a78;
+}
+
+/* ================================
+    Header Area CSS
+============================*/
+
+.header_area {
+    padding: 10px 0;
+    position: relative;
+}
+
+.header_area::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 8%;
+    height: 1px;
+    width: 85%;
+    background: #ddd;
+}
+
+.header_menu ul {
+    margin-top: 10px;
+}
+
+.header_menu ul li {
+    display: inline-block;
+    margin-left: -4px;
+}
+
+.header_menu ul li a {
+    display: inline-block;
+    text-decoration: none;
+    padding: 0 13px;
+    text-transform: uppercase;
+    color: #333333;
+    font-size: 14px;
+    font-weight: 600;
+    position: relative;
+    transition: .5s;
+}
+
+.header_menu ul li a:hover {
+    color: rgba(51,51,51,0.7);
+}
+
+.header_menu ul li a::after {
+	content: "";
+	position: absolute;
+	bottom: 0;
+	left: 15%;
+	height: 2px;
+	width: 0%;
+	background: var(--primary);
+    transition: .5s;
+}
+
+.header_menu ul li a:hover::after {
+    width: 70%;
+}
+
+.header_account {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.header_login {
+    margin-top: 13px;
+}
+
+.header_login p {
+    font-size: 14px;
+    text-transform: uppercase;
+    color: #333;
+    font-weight: 500;
+    transition: .5s;
+    cursor: pointer;
+}
+
+.header_login p:hover {
+    color: rgba(51,51,51,0.7);
+}
+
+.header_icons span {
+    margin-left: 10px;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.header_icons span:hover {
+    color: rgba(51,51,51,0.7);;
+}
+
+/* Off Canvas Menu */
+
+.offcanvas-bottom {
+    min-height: 80vh;
+}
+
+.off_search_title {
+	font-size: 20px;
+	text-align: center;
+	font-weight: 600;
+    margin-bottom: 30px;
+}
+
+/* ================================
+    Category Area CSS
+============================*/
+
+.category_area {
+    padding: 20px 0;
+}
+
+.category_content {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    cursor: pointer;
+}
+
+.category_img img {
+    width: 45px;
+}
+
+.category_text h3 {
+    color: #242424;
+    font-size: 18px;
+}
+
+.category_text p {
+    color: #777;
+    font-size: 15px;
 }
