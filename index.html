@@ -80,18 +80,25 @@
                     </div>
                     <div class="offcanvas-body small">
                         <h3 class="off_search_title">Search Your Favourate Product</h3>
-                        <input class="form-control w-75 m-auto" list="datalistOptions" id="exampleDataList" placeholder="Search Here...">
+                        <div class="input-group w-75 m-auto mb-3">
+                            <input type="text" id="search_bar" class="form-control border-primary" list="datalistOptions" placeholder="Search Here..." aria-label="Recipient's username" aria-describedby="search_btn">
+                            <button class="btn btn-outline-primary" type="button" id="search_btn">Button</button>
+                        </div>
                         <datalist id="datalistOptions">
-                        <option value="San Francisco">
-                        <option value="New York">
-                        <option value="Seattle">
-                        <option value="Los Angeles">
-                        <option value="Chicago">
+                        <option value="men's clothing">
+                        <option value="women's clothing">
+                        <option value="jewelery">
+                        <option value="electronics">
                         </datalist>
+                        <div id="search_display" class="row row-cols-3 g-5 mt-4">
+
+                        </div>
                     </div>
                 </div>
             </div>
         </section>
+
+        <!---------- Catagory Area ---------->
 
         <section class="category_area">
             <div class="inner_category_area container">
@@ -140,6 +147,99 @@
                             </div>
                         </div>
                     </div>
+                </div>
+            </div>
+        </section>
+
+        <!---------- Carousel Area ---------->
+
+        <section class="carousel_area">
+            <div class="inner_carousel_area container">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="carousel_container">
+                            <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+                                <div class="carousel-indicators">
+                                  <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                                  <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                                  <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                                </div>
+                                <div id="carousel_container" class="carousel-inner">
+                                    <div class="carousel-item active">
+                                        <img src="img/slide-1.jpg" alt="">
+                                    </div>
+                                    <div class="carousel-item">
+                                        <img src="img/slide-2.jpg" alt="">
+                                    </div>
+                                </div>
+                                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+                                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                  <span class="visually-hidden">Previous</span>
+                                </button>
+                                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+                                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                  <span class="visually-hidden">Next</span>
+                                </button>
+                              </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!---------- Carousel Area ---------->
+
+        <section class="client_area">
+            <div class="inner_client_area container">
+                <div class="row client_wrap">
+                    <div class="col-lg-3">
+                        <div class="client_content">
+                            <img src="img/client_1.png" alt="">
+                        </div>
+                    </div>
+                    <div class="col-lg-3">
+                        <div class="client_content">
+                            <img src="img/client-2.png" alt="">
+                        </div>
+                    </div>
+                    <div class="col-lg-3">
+                        <div class="client_content">
+                            <img src="img/client-3.png" alt="">
+                        </div>
+                    </div>
+                    <div class="col-lg-3">
+                        <div class="client_content">
+                            <img src="img/client-4.png" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!---------- Product Area ---------->
+
+        <section class="product_area">
+            <div class="inner_product_area container">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="product_title">
+                            <h4>Featured Products </h4>
+                            <p>Will your clients accept that you go about things order. </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="product_category">
+                            <button onclick="categoryData()" class="btn btn-link">men's clothing</button>
+                            <button onclick="categoryData()" class="btn btn-link">women's clothing</button>
+                            <button onclick="categoryData()" class="btn btn-link">jewelery</button>
+                            <button onclick="categoryData()" class="btn btn-link">electronics</button>
+                        </div>
+                    </div>
+                </div>
+                <div id="products_display" class="row row-cols-4 g-4 mt-4">
+                    
                 </div>
             </div>
         </section>

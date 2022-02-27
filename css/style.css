@@ -109,7 +109,7 @@
 /* Off Canvas Menu */
 
 .offcanvas-bottom {
-    min-height: 80vh;
+    min-height: 90vh;
 }
 
 .off_search_title {
@@ -146,4 +146,95 @@
 .category_text p {
     color: #777;
     font-size: 15px;
+}
+
+.carousel-item img {
+    height: 500px !important;
+    width: 100% !important;
+}
+
+/* ================================
+    Client Area CSS
+============================*/
+
+.client_area {
+    padding: 30px 0;
+}
+
+.client_wrap {
+    display: flex;
+}
+
+.client_content {
+    text-align: center;
+}
+
+.client_content img {
+    width: 120px;
+    opacity: .5;
+    transition: .5s;
+}
+
+.client_content img:hover {
+    opacity: 1;
+}
+
+/* ================================
+    product Area CSS
+============================*/
+
+.product_area {
+    padding: 50px 0;
+}
+
+.product_title {
+    text-align: center;
+}
+
+.product_title h4 {
+    color: #242424;
+    font-size: 30px;
+    font-weight: 600;
+}
+
+.product_title p {
+    color: #777777;
+    font-size: 15px;
+    font-weight: 400;
+}
+
+.product_category {
+    display: flex;
+    justify-content: center;
+}
+
+.product_category button {
+    text-decoration: none;
+    color: #242424;
+    font-size: 20px;
+    font-weight: 400;
+}
+
+/* Products */
+
+.product_img img {
+    width: 100%;
+}
+
+.product_description {
+    text-align: center;
+}
+
+.product_description p {
+    color: #333333;
+    font-size: 14px;
+    font-weight: 400;
+    margin-top: 10px;
+}
+
+.product_description h5 {
+    color: #574a78;
+    font-size: 15px;
+    font-weight: 600;
+    margin-top: -10px;
 }
