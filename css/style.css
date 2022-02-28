@@ -238,3 +238,24 @@
     font-weight: 600;
     margin-top: -10px;
 }
+
+.cart_btn {
+	border: none;
+	outline: none;
+	height: 40px;
+	width: 150px;
+	margin-top: 7px;
+	border-radius: 5px;
+}
+
+#display_cart .products {
+    margin-bottom: 20px;
+}
+
+#display_cart .product_img {
+    text-align: center;
+}
+
+#display_cart .product_img img {
+    width: 20%;
+}

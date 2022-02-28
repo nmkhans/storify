@@ -26,6 +26,7 @@ const searchResult = (products) => {
             <div class="product_description">
             <p>${product.title}</p>
             <h5>$${product.price}</h5>
+            <button onclick="addToCart('${product.id}')" class="cart_btn">Add to cart</button>
             </div>
         `;
         col.appendChild(products);
@@ -33,7 +34,7 @@ const searchResult = (products) => {
     }
 }
 
-/* Button */
+/* Product filter with button */
 
 const categoryData = () => {
     let buttonValue = event.target.innerText;
@@ -44,6 +45,7 @@ const categoryData = () => {
 }
 
 const displayProducts = (products) => {
+    console.log(products);
     const productDisplay = document.getElementById('products_display');
     productDisplay.textContent = '';
     for(let product of products) {
@@ -58,9 +60,36 @@ const displayProducts = (products) => {
             <div class="product_description">
             <p>${product.title}</p>
             <h5>$${product.price}</h5>
+            <button onclick="addToCart('${product.id}')" class="cart_btn">Add to cart</button>
             </div>
         `;
         col.appendChild(products);
         productDisplay.appendChild(col);
     }
+}
+
+const addToCart = (productId) => {
+    const url = `https://fakestoreapi.com/products/${productId}`;
+    fetch(url)
+    .then(res => res.json())
+    .then(data => displayInCart(data))
+}
+
+const displayInCart = (product) => {
+    const cartDisplay = document.getElementById('display_cart');
+    const col = document.createElement('div');
+    col.classList.add('col');
+    const products = document.createElement('div');
+    products.classList.add('products');
+    products.innerHTML = `
+        <div class="product_img">
+        <img src="${product.image}" alt="">
+        </div>
+        <div class="product_description">
+        <p>${product.title}</p>
+        <h5>$${product.price}</h5>
+        </div>
+    `;
+    col.appendChild(products);
+    cartDisplay.appendChild(col);
 }
